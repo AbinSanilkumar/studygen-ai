@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>StudyGen AI</title>
+</head>
+<body>
+
+    <h1>Upload Handwritten Notes</h1>
+
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <input type="file" name="image">
+
+        <button type="submit">
+            Extract Text
+        </button>
+    </form>
+
+    <hr>
+
+    <h2>Extracted Text:</h2>
+
+    <p>{{ text }}</p>
+
+</body>
+</html>
